@@ -1,0 +1,206 @@
+/* MODERN RESPONSIVE NAVBAR STYLE */
+
+#cssmenu-wrapper {
+	width: 100%;
+	background-color: #1e293b;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	border-bottom: 2px solid var(--primary);
+	font-family: 'Outfit', sans-serif;
+}
+
+#cssmenu-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	height: 60px;
+}
+
+.brand-title {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.brand-title span {
+	color: #ef4444;
+}
+
+#cssmenu {
+	display: flex;
+	align-items: center;
+}
+
+#cssmenu > ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#cssmenu > ul > li {
+	position: relative;
+}
+
+#cssmenu > ul > li > a {
+	display: block;
+	padding: 20px 14px;
+	color: #cbd5e1;
+	font-size: 13px;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.2s ease;
+	letter-spacing: 0.5px;
+}
+
+#cssmenu > ul > li > a:hover {
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Dropdown styling */
+#cssmenu ul ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #1e293b;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+	border: 1px solid var(--card-border);
+	border-top: 2px solid var(--primary);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(10px);
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	min-width: 200px;
+	z-index: 100;
+}
+
+#cssmenu ul li:hover > ul {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+#cssmenu ul ul li a {
+	display: block;
+	padding: 12px 18px;
+	color: #cbd5e1;
+	font-size: 13px;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#cssmenu ul ul li:last-child a {
+	border-bottom: none;
+}
+
+#cssmenu ul ul li a:hover {
+	background-color: var(--primary);
+	color: #ffffff;
+}
+
+.header-right-controls {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.theme-toggle-btn {
+	background: none;
+	border: none;
+	color: #cbd5e1;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 8px 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+	outline: none;
+}
+
+.theme-toggle-btn:hover {
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.05);
+	border-radius: var(--radius-sm);
+}
+
+/* Hamburger button */
+.menu-toggle-btn {
+	display: none;
+	background: none;
+	border: none;
+	color: #ffffff;
+	font-size: 22px;
+	cursor: pointer;
+	padding: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+	#cssmenu-container {
+		height: auto;
+		min-height: 60px;
+		flex-wrap: wrap;
+		padding: 10px 20px;
+	}
+	
+	.menu-toggle-btn {
+		display: block;
+	}
+	
+	#cssmenu {
+		width: 100%;
+		display: none; /* toggled by jquery */
+		margin-top: 10px;
+	}
+	
+	#cssmenu > ul {
+		flex-direction: column;
+		width: 100%;
+		align-items: stretch;
+	}
+	
+	#cssmenu > ul > li {
+		width: 100%;
+	}
+	
+	#cssmenu > ul > li > a {
+		padding: 12px 10px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	}
+	
+	#cssmenu ul ul {
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+		box-shadow: none;
+		border: none;
+		background-color: rgba(0, 0, 0, 0.15);
+		padding-left: 20px;
+		display: none; /* toggled on hover/click */
+	}
+	
+	#cssmenu ul li:hover > ul {
+		display: block;
+	}
+}
