@@ -1,4 +1,4 @@
-# 📊 PLO System (Precinct-Level Organization System)
+# 📊 PLO (Precinct-Level Organization) System
 
 [![PHP Version](https://shields.io)](https://php.net)
 [![Bootstrap Version](https://shields.io)](https://getbootstrap.com)
