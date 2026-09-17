@@ -1,10 +1,5 @@
 # 📊 PLO (Precinct-Level Organization) System
 
-[![PHP Version](https://shields.io)](https://php.net)
-[![Bootstrap Version](https://shields.io)](https://getbootstrap.com)
-[![Database](https://shields.io)](https://mysql.com)
-[![Cache Buster](https://shields.io)](#)
-
 A high-performance, responsive, and secure **Precinct-Level Organization (PLO) Database Management Dashboard**. Designed explicitly for multi-tiered voter organization networks, layout management, demographic mapping, and analytics aggregation down to individual cluster jurisdictions.
 
 ---
