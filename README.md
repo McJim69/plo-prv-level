@@ -20,12 +20,23 @@ A high-performance, responsive, and secure **Precinct-Level Organization (PLO) D
 
 The application core maps down relationship linkages sequentially:
 
-📍 Municipality (City / Town Scope)┗ 
-🗺️ Barangay (Village Scope)┗ 
-🗳️ Precinct / Cluster Segment┗ 
-🛡️ MCE Name Pointer (Voters Link)┗ ⭐ BCE Name Pointer (Voters Link)┗ 
-🏠 House Leader (HL)┗ 
-👨‍👩‍👧‍👦 Household Members (hl_children)
+---
+
+## 📂 System Architecture & Hierarchy Tree
+
+The application core maps down relationship linkages sequentially:
+
+```text
+📍 Province Scope
+ ┗ 🏢 DISTRICT JURISDICTION
+    ┗ 📍 Municipality (City / Town Scope)
+       ┗ 🗺️ Barangay (Village Scope)
+          ┗ 🗳️ Precinct / Cluster Segment
+             ┗ 🛡️ MCE Name Pointer (Voters Link)
+                ┗ ⭐ BCE Name Pointer (Voters Link)
+                   ┗ 🏠 House Leader (HL)
+                      ┗ 👨‍👩‍👧‍👦 Household Members (hl_children)
+```
 
 ---
 
